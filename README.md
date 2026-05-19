@@ -69,7 +69,15 @@ Aplikasi dirancang dengan **Grizzly Dark Theme** (Tema gelap modern) yang seimba
 
 ---
 
-## 5. Analisis Hasil Eksekusi GUI
+## 5. Tampilan Antarmuka Aplikasi GUI
+
+Berikut adalah tangkapan layar antarmuka **Dynamic Knapsack Solver** saat pertama kali dijalankan:
+
+![Tampilan GUI Aplikasi](gui_screenshot.png)
+
+---
+
+## 6. Analisis Hasil Eksekusi GUI
 
 Ketika tombol **"JALANKAN EVOLUSI"** ditekan dengan konfigurasi bawaan NIM:
 - **Kapasitas**: 50
@@ -97,21 +105,21 @@ Grafik plot perkembangan fitness juga tersimpan secara otomatis sebagai file gam
 
 ---
 
-## 6. Kesimpulan
+## 7. Kesimpulan
 1. **GUI Tkinter** memberikan fleksibilitas luar biasa bagi pengguna untuk berinteraksi langsung dengan Algoritma Genetika secara visual.
 2. Integrasi **Matplotlib Canvas** (`FigureCanvasTkAgg`) membuat analisis data evolusi menjadi jauh lebih intuitif karena pengguna dapat mengamati kurva kekonvergenan secara langsung.
 3. **Desain Dinamis** terbukti sangat unggul karena dapat menangani perubahan daftar barang atau kapasitas tas dari berbagai *shift* praktikum yang berbeda tanpa merestart atau menulis ulang kode program.
 
 ---
 
-## 7. Cara Menjalankan Aplikasi GUI
+## 8. Cara Menjalankan Aplikasi GUI
 
 ### Langkah 1: Pastikan Prasyarat Terpasang
 Buka terminal dan pasang pustaka `matplotlib` dan `numpy` jika belum terinstal:
 ```bash
 pip install matplotlib numpy
 ```
-*(Tkinter merupakan pustaka bawaan standar Python, sehingga tidak memerlukan instalasi tambahan di sebagian besar sistem).*
+*(Tkinter merupakan pustaka bawaan standar Python, sehingga tidak memerlukan instalasi tambahan di sebagian beberapa sistem).*
 
 ### Langkah 2: Jalankan Program
 Arahkan terminal ke folder `PraktikumKB_10` dan jalankan perintah:
@@ -119,3 +127,27 @@ Arahkan terminal ke folder `PraktikumKB_10` dan jalankan perintah:
 python main.py
 ```
 Aplikasi desktop interaktif bertema gelap modern akan segera muncul di layar Anda!
+
+---
+
+## 9. Panduan Lengkap Cara Penggunaan Aplikasi GUI
+
+Aplikasi ini didesain agar sangat mudah dan interaktif. Ikuti langkah-langkah di bawah ini untuk menggunakannya:
+
+1. **Sesuaikan Parameter Algoritma Genetika (Kiri Atas)**:
+   * Masukkan **Kapasitas Tas** maksimal (default: 50).
+   * Tentukan jumlah **Generasi** (default: 50) dan **Jumlah Populasi** (default: 20).
+   * Masukkan probabilitas **Crossover** (default: 0.5) dan **Mutasi** (default: 0.1).
+   * **Pilih Metode**: Di menu drop-down, pastikan metode terpilh adalah **Roulette Wheel (RWS)**, **One Point**, dan **Swap Mutation** (default bawaan NIM Anda).
+
+2. **Kelola Daftar Barang Gudang (Kiri Bawah)**:
+   * **Menambah Barang Baru**: Ketik nama barang pada kolom *Nama* (misal: `BarangX`), masukkan keuntungan di kolom *Untung*, dan berat di kolom *Ukuran*, lalu klik tombol **`+ Tambah`**. Barang baru akan langsung terdaftar di tabel.
+   * **Menghapus Barang**: Klik pada salah satu baris barang yang ingin dihapus pada tabel, lalu klik tombol **`Hapus Barang Terpilih`**.
+   * **Reset ke Awal**: Jika ingin mengembalikan daftar barang ke 9 barang standar modul, klik tombol **`Reset Default`**.
+
+3. **Jalankan Optimasi**:
+   * Klik tombol besar berwarna biru di bagian bawah: **`🚀 JALANKAN EVOLUSI ALGORITMA GENETIKA`**.
+
+4. **Amati Hasil dan Grafik (Kanan)**:
+   * **Grafik Perkembangan**: Di bagian kanan atas, grafik akan ter-render secara otomatis menampilkan kurva nilai kebugaran (kuning = terendah, merah = rata-rata, biru = tertinggi) serta sebaran populasi (titik-titik abu-abu).
+   * **Kesimpulan Solusi**: Di kotak hijau neon bagian kanan bawah, Anda akan melihat **Nilai Keuntungan Maksimal**, **Total Berat Barang Terpilih**, **Representasi Biner** kromosom terbaik, serta **Daftar Barang** yang paling menguntungkan untuk dibeli!
