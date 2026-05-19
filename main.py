@@ -45,17 +45,13 @@ class GeneticAlgorithmGUI:
         self.style.map("TButton", background=[("active", "#0098ff")])
         self.style.configure("TCombobox", background="#333333", foreground=self.fg_white, fieldbackground="#333333")
         
-        # Daftar barang default (Dari Pertemuan 9) sebagai data awal
+        # Daftar barang default sesuai Ketentuan Praktikum Shift Anda
         self.barang_default = [
-            ("Barang1", 60, 10),
-            ("Barang2", 100, 20),
-            ("Barang3", 120, 30),
-            ("Barang4", 90, 25),
-            ("Barang5", 69, 11),
-            ("Barang6", 70, 9),
-            ("Barang7", 80, 15),
-            ("Barang8", 90, 10),
-            ("Barang9", 25, 3)
+            ("Barang1", 10, 5),
+            ("Barang2", 40, 4),
+            ("Barang3", 30, 6),
+            ("Barang4", 50, 3),
+            ("Barang5", 35, 7)
         ]
         
         self.barang_list = list(self.barang_default)
@@ -89,7 +85,7 @@ class GeneticAlgorithmGUI:
         ttk.Label(ga_param_panel, text="Kapasitas Tas:").grid(row=1, column=0, sticky="w", pady=5)
         self.entry_kapasitas = ttk.Entry(ga_param_panel, width=10)
         self.entry_kapasitas.grid(row=1, column=1, sticky="w", pady=5)
-        self.entry_kapasitas.insert(0, "50")
+        self.entry_kapasitas.insert(0, "15")
         
         ttk.Label(ga_param_panel, text="Jumlah Populasi:").grid(row=1, column=2, sticky="w", pady=5)
         self.entry_populasi = ttk.Entry(ga_param_panel, width=10)

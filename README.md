@@ -79,8 +79,8 @@ Berikut adalah tangkapan layar antarmuka **Dynamic Knapsack Solver** saat pertam
 
 ## 6. Analisis Hasil Eksekusi GUI
 
-Ketika tombol **"JALANKAN EVOLUSI"** ditekan dengan konfigurasi bawaan NIM:
-- **Kapasitas**: 50
+Ketika tombol **"JALANKAN EVOLUSI"** ditekan dengan konfigurasi bawaan NIM dan ketentuan shift praktikum:
+- **Kapasitas**: 15
 - **Seleksi**: Roulette Wheel
 - **Crossover**: One Point
 - **Mutasi**: Swap
@@ -89,16 +89,13 @@ Ketika tombol **"JALANKAN EVOLUSI"** ditekan dengan konfigurasi bawaan NIM:
 Aplikasi berhasil melakukan perhitungan iteratif secara cepat dan langsung memetakan grafik ke layar. Solusi terbaik yang didapatkan adalah:
 
 ```text
-✔ Nilai Fitness Terbaik : 334 (Keuntungan Maksimal)
-✔ Total Bobot / Ukuran : 48 (Kapasitas Maksimal: 50)
-✔ Representasi Biner   : [0, 1, 0, 0, 1, 1, 1, 1, 1]
+✔ Nilai Fitness Terbaik : 125 (Keuntungan Maksimal)
+✔ Total Bobot / Ukuran : 14 (Kapasitas Maksimal: 15)
+✔ Representasi Biner   : [0, 1, 0, 1, 1]
 ✔ Barang yang Dibeli   :
    - Barang2
+   - Barang4
    - Barang5
-   - Barang6
-   - Barang7
-   - Barang8
-   - Barang9
 ```
 
 Grafik plot perkembangan fitness juga tersimpan secara otomatis sebagai file gambar resolusi tinggi dengan nama `fitness_development.png`. Hal ini mempermudah pencetakan atau dokumentasi hasil pengujian.
